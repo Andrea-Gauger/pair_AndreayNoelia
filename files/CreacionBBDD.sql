@@ -42,7 +42,7 @@ CREATE TABLE facturas (
     id_zapatilla INT NOT NULL,
     id_empleado INT NOT NULL, 
     id_cliente INT NOT NULL, 
-    PRIMARY KEY (id_factura),
+    PRIMARY KEY (id_factura, id_zapatilla, id_empleado),
     CONSTRAINT fk_zapatilla
 		FOREIGN KEY (id_zapatilla)
         REFERENCES zapatillas (id_zapatilla),
