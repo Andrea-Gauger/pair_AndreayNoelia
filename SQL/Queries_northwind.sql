@@ -7,9 +7,11 @@ SELECT *
 
 SELECT EmployeeID, Lastname, FirstName
 	FROM employees;
+    
 -- Conociendo los productos más baratos:
 -- identificar aquellos productos (tabla products) cuyos precios por unidad (UnitPrice) oscilen entre 0 y 5 dólares, 
 -- los productos más asequibles.
+
 SELECT ProductID, ProductName, UnitPrice, UnitsInStock
 	FROM products
 	WHERE UnitPrice BETWEEN 0 AND 5;
@@ -38,7 +40,9 @@ SELECT *
 -- Conociendo los países a los que vendemos: A Northwind le interesa conocer los datos de los países que hacen pedidos (orders) 
 -- para focalizar el negocio en esas regiones y al mismo tiempo crear campañas de marketing para conseguir mejorar en las otras
 -- regiones. Realiza una consulta para obtener ese dato.
-    
+
+SELECT ShipCountry 
+	FROM Orders;
    
 -- 10. Conociendo el tipo de productos que vendemos en Northwind: Crea una consulta que muestre los primeros 10 productos según su ID 
 -- y que nos indique el nombre de dichos productos y sus precios.
